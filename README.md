@@ -1,5 +1,8 @@
 # NgluTicTacToe
 
+This is a game application of Tic Tac Toe, by LU
+Angular v13
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.5.
 
 ## Development server

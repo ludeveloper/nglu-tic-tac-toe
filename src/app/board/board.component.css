@@ -1,0 +1,17 @@
+main {
+  height: 600px;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  grid-gap: 2px;
+  grid-template-rows: 33.3% 33.3% 33.3%;
+}
+
+app-square {
+  height: 100%;
+}
+spacer {
+  flex: 1 1 auto;
+}
+mat-icon {
+  margin-right: 10px;
+}

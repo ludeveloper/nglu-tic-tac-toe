@@ -1,0 +1,35 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Tic Tac Toe by Lutfullah Ugurer</span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <mat-icon *ngIf="!winner" aria-hidden="false" aria-label="Verified icon"
+      >games</mat-icon
+    >
+    <mat-card-subtitle *ngIf="!winner"
+      >Current Player: {{ player }}</mat-card-subtitle
+    >
+
+    <mat-icon *ngIf="winner" aria-hidden="false" aria-label="heart"
+      >favorite</mat-icon
+    >
+    <mat-card-subtitle *ngIf="winner" [ngClass]="{ winner: winner }">
+      Player {{ winner }} won the game!</mat-card-subtitle
+      >
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+    <mat-icon aria-hidden="false" aria-label="heart"
+      >restart_alt</mat-icon
+    >
+    <button mat-icon-button (click)="newGame()">New Game</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<main>
+  <app-square
+    *ngFor="let val of squares; let i = index"
+    [value]="val"
+    (click)="!winner ? makeMove(i) : null"
+  >
+  </app-square>
+</main>
